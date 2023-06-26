@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1f2035;
+  font-family: "Jost", sans-serif;
+  color: white;
+}
+
+.info {
+  margin: 30px 15%;
+}
+.info__skills {
+  white-space: nowrap;
+  list-style-type: none;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.info__skills li {
+  display: inline;
+  border: 1px solid #5f6589;
+  border-radius: 400px;
+  padding: 3px 10px;
+}
+.info__header {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 5rem;
+}
+.info__about {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5% 0;
+}
+.info__about__list {
+  width: 50%;
+  font-weight: 400;
+  list-style-type: none;
+}
+.info__about__list li {
+  margin-bottom: 30px;
+}
+.info__about__list li h6 {
+  font-size: 1.1rem;
+  color: #5f6589;
+}
+.info__about__list li p {
+  margin-top: 8px;
+  font-size: 1.3rem;
+}
+@media (max-width: 1000px) {
+  .info {
+    margin: 30px 5%;
+  }
+  .info__header {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .info__about__list {
+    width: 100%;
+  }
+}
+
+.galley {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  padding: 0 10%;
+}
+.galley__background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 900px;
+  background-image: url("../img/galleryBackground.png");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.galley__pair-img {
+  width: 100%;
+  position: relative;
+}
+.galley__pair-img #slice9 {
+  position: absolute;
+  right: 10%;
+}
+.galley__pair-img #slice10 {
+  position: absolute;
+  top: 300px;
+}
+@media (max-width: 1000px) {
+  .galley__pair-img img {
+    width: 45%;
+    height: auto;
+  }
+  .galley__pair-img #slice9 {
+    right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .galley {
+    padding: 0 5%;
+  }
+  .galley__background {
+    background-repeat: repeat-y;
+    background-size: auto 50%;
+    background-position: top;
+  }
+}
+@media (max-width: 480px) {
+  .galley__background {
+    display: none;
+  }
+  .galley__pair-img img {
+    border: 1px solid white;
+    border-radius: 15px;
+  }
+}
+@media (max-width: 320px) {
+  .galley__pair-img #slice9,
+  .galley__pair-img #slice10 {
+    position: static;
+    width: 100%;
+  }
+  .galley__pair-img #slice9 {
+    margin-bottom: 50px;
+  }
+}
