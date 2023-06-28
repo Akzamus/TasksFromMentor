@@ -10,126 +10,168 @@ body {
   color: white;
 }
 
-.info {
-  margin: 30px 15%;
+.border-white {
+  border: 1px solid white;
+  border-radius: 8px;
 }
-.info__skills {
+
+.introduction {
+  margin: 13% 16%;
+}
+.introduction__list {
   white-space: nowrap;
   list-style-type: none;
-  font-size: 1.1rem;
+  font-size: 1.06rem;
   font-weight: 400;
 }
-.info__skills li {
+.introduction__item {
   display: inline;
   border: 1px solid #5f6589;
-  border-radius: 400px;
-  padding: 3px 10px;
+  border-radius: 500px;
+  padding: 5px 10px;
 }
-.info__header {
+.introduction__title {
   margin-top: 20px;
   font-weight: 500;
-  font-size: 5rem;
+  font-size: 6.25rem;
 }
-.info__about {
+.introduction__container {
+  margin-top: 40px;
   display: flex;
   justify-content: flex-end;
-  padding: 5% 0;
 }
-.info__about__list {
+.introduction__info {
   width: 50%;
   font-weight: 400;
   list-style-type: none;
 }
-.info__about__list li {
-  margin-bottom: 30px;
-}
-.info__about__list li h6 {
-  font-size: 1.1rem;
+.introduction .item-info__title {
+  font-size: 1.06rem;
   color: #5f6589;
 }
-.info__about__list li p {
-  margin-top: 8px;
-  font-size: 1.3rem;
+.introduction .item-info__text {
+  margin-top: 20px;
+  font-size: 1.25rem;
+  line-height: 26px;
 }
-@media (max-width: 1000px) {
-  .info {
-    margin: 30px 5%;
-  }
-  .info__header {
-    font-size: 3rem;
-  }
-}
-@media (max-width: 768px) {
-  .info__about__list {
-    width: 100%;
-  }
+.introduction .item-info:not(:last-child) {
+  margin-bottom: 50px;
 }
 
-.galley {
+.top-gallery {
   position: relative;
   width: 100%;
-  height: 900px;
-  padding: 0 10%;
 }
-.galley__background {
+.top-gallery__background {
   position: absolute;
+  width: 100%;
   left: 0;
   top: 0;
   z-index: -1;
-  width: 100%;
-  height: 900px;
-  background-image: url("../img/galleryBackground.png");
+  min-height: 900px;
+  background-image: url("../img/backgrounds/1.png");
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
 }
-.galley__pair-img {
-  width: 100%;
+.top-gallery__first-pair {
   position: relative;
+  height: 1428px;
+  width: 100%;
 }
-.galley__pair-img #slice9 {
+.top-gallery__first-pair #banner-one {
   position: absolute;
-  right: 10%;
+  right: 27.6%;
+  width: 21.9%;
 }
-.galley__pair-img #slice10 {
+.top-gallery__first-pair #banner-two {
   position: absolute;
-  top: 300px;
+  left: 16%;
+  width: 21.9%;
+  margin-top: 356px;
 }
+
 @media (max-width: 1000px) {
-  .galley__pair-img img {
-    width: 45%;
-    height: auto;
+  .introduction {
+    margin: 13% 2.6%;
   }
-  .galley__pair-img #slice9 {
-    right: 0;
+  .introduction__title {
+    font-size: 4.375em;
+  }
+  .top-gallery__first-pair {
+    height: 1334px;
+  }
+  .top-gallery__first-pair #banner-one {
+    right: 18.3%;
+    width: 30.7%;
+    margin-top: 242px;
+  }
+  .top-gallery__first-pair #banner-two {
+    left: 18.3%;
+    width: 30.7%;
+    margin-top: 550px;
   }
 }
 @media (max-width: 768px) {
-  .galley {
-    padding: 0 5%;
+  .introduction__title {
+    font-size: 3.75rem;
   }
-  .galley__background {
+  .introduction__info {
+    width: 100%;
+  }
+  .top-gallery__background {
     background-repeat: repeat-y;
     background-size: auto 50%;
     background-position: top;
   }
+  .top-gallery__first-pair {
+    height: 1400px;
+  }
+  .top-gallery__first-pair #banner-one {
+    right: 2.6%;
+    width: 46%;
+    margin-top: 142px;
+  }
+  .top-gallery__first-pair #banner-two {
+    left: 2.6%;
+    width: 46%;
+    margin-top: 496px;
+  }
 }
 @media (max-width: 480px) {
-  .galley__background {
+  .introduction__title {
+    font-size: 3.5rem;
+  }
+  .top-gallery {
+    height: 906px;
+  }
+  .top-gallery__background {
     display: none;
   }
-  .galley__pair-img img {
-    border: 1px solid white;
-    border-radius: 15px;
+  .top-gallery__first-pair #banner-one {
+    margin-top: 0;
+  }
+  .top-gallery__first-pair #banner-two {
+    margin-top: 354px;
   }
 }
 @media (max-width: 320px) {
-  .galley__pair-img #slice9,
-  .galley__pair-img #slice10 {
+  .introduction__title {
+    font-size: 3.25rem;
+  }
+  .top-gallery {
+    height: 1448px;
+    padding-left: 2.6%;
+    padding-right: 2.6%;
+  }
+  .top-gallery__first-pair #banner-one {
     position: static;
     width: 100%;
+    margin-bottom: 96px;
   }
-  .galley__pair-img #slice9 {
-    margin-bottom: 50px;
+  .top-gallery__first-pair #banner-two {
+    position: static;
+    width: 100%;
+    margin-top: 0;
   }
 }

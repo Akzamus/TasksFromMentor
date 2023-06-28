@@ -12,150 +12,214 @@ body {
 	color: white;
 }
 
-.info {
-	margin: 30px 15%;
+.border-white {
+	border: 1px solid white;
+	border-radius: 8px;
+}
 
-	&__skills {
+.introduction {
+	margin: 13% 16%;
+
+	&__list {
 		white-space: nowrap;
 		list-style-type: none;
-		font-size: 1.1rem;
+		font-size: 1.06rem;
 		font-weight: 400;
-
-		li {
-			display: inline;
-			border: 1px solid $blueish-color;
-			border-radius: 400px;
-			padding: 3px 10px;
-		}
 	}
 
-	&__header {
+	&__item {
+		display: inline;
+		border: 1px solid $blueish-color;
+		border-radius: 500px;
+		padding: 5px 10px;
+	}
+
+	&__title {
 		margin-top: 20px;
 		font-weight: 500;
-		font-size: 5rem;
+		font-size: 6.25rem;
 	}
 
-	&__about {
+	&__container {
+		margin-top: 40px;
 		display: flex;
 		justify-content: flex-end;
-		padding: 5% 0;
-
-		&__list {
-			width: 50%;
-			font-weight: 400;
-			list-style-type: none;
-
-			li {
-				margin-bottom: 30px;
-
-				h6 {
-					font-size: 1.1rem;
-					color: $blueish-color;
-				}
-
-				p {
-					margin-top: 8px;
-					font-size: 1.3rem;
-				}
-			}
-		}
 	}
 
-	@media (max-width: 1000px) {
-		margin: 30px 5%;
-
-		&__header {
-			font-size: 3rem;
-		}
+	&__info {
+		width: 50%;
+		font-weight: 400;
+		list-style-type: none;
 	}
 
-	@media (max-width: 768px) {
-		&__about__list {
-			width: 100%;
+	.item-info {
+		&__title {
+			font-size: 1.06rem;
+			color: $blueish-color;
+		}
+
+		&__text {
+			margin-top: 20px;
+			font-size: 1.25rem;
+			line-height: 26px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 50px;
 		}
 	}
 }
 
-.galley {
+.top-gallery {
 	position: relative;
 	width: 100%;
-	height: 900px;
-	padding: 0 10%;
 
 	&__background {
 		position: absolute;
+		width: 100%;
 		left: 0;
 		top: 0;
 		z-index: -1;
-		width: 100%;
-		height: 900px;
-		background-image: url("../img/galleryBackground.png");
+		min-height: 900px;
+		background-image: url("../img/backgrounds/1.png");
 		background-size: cover;
 		background-position: right;
 		background-repeat: no-repeat;
 	}
 
-	&__pair-img {
-		width: 100%;
+	&__first-pair {
 		position: relative;
+		height: 1428px;
+		width: 100%;
 
-		#slice9 {
+		#banner-one {
 			position: absolute;
-			right: 10%;
+			right: 27.6%;
+			width: 21.9%;
 		}
 
-		#slice10 {
+		#banner-two {
 			position: absolute;
-			top: 300px;
+			left: 16%;
+			width: 21.9%;
+			margin-top: 356px;
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.introduction {
+		margin: 13% 2.6%;
+
+		&__title {
+			font-size: 4.375em;
 		}
 	}
 
-	@media (max-width: 1000px) {
-		&__pair-img {
-			img {
-				width: 45%;
-				height: auto;
+	.top-gallery {
+		&__first-pair {
+			height: 1334px;
+
+			#banner-one {
+				right: 18.3%;
+				width: 30.7%;
+				margin-top: 242px;
 			}
 
-			#slice9 {
-				right: 0;
+			#banner-two {
+				left: 18.3%;
+				width: 30.7%;
+				margin-top: 550px;
 			}
 		}
 	}
+}
 
-	@media (max-width: 768px) {
-		padding: 0 5%;
+@media (max-width: 768px) {
+	.introduction {
+		&__title {
+			font-size: 3.75rem;
+		}
 
+		&__info {
+			width: 100%;
+		}
+	}
+
+	.top-gallery {
 		&__background {
 			background-repeat: repeat-y;
 			background-size: auto 50%;
 			background-position: top;
 		}
+
+		&__first-pair {
+			height: 1400px;
+
+			#banner-one {
+				right: 2.6%;
+				width: 46%;
+				margin-top: 142px;
+			}
+
+			#banner-two {
+				left: 2.6%;
+				width: 46%;
+				margin-top: 496px;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.introduction {
+		&__title {
+			font-size: 3.5rem;
+		}
 	}
 
-	@media (max-width: 480px) {
+	.top-gallery {
+		height: 906px;
+
 		&__background {
 			display: none;
 		}
 
-		&__pair-img {
-			img {
-				border: 1px solid white;
-				border-radius: 15px;
+		&__first-pair {
+			#banner-one {
+				margin-top: 0;
+			}
+
+			#banner-two {
+				margin-top: 354px;
 			}
 		}
 	}
+}
 
-	@media (max-width: 320px) {
-		&__pair-img {
-			#slice9,
-			#slice10 {
+@media (max-width: 320px) {
+	.introduction {
+		&__title {
+			font-size: 3.25rem;
+		}
+	}
+
+	.top-gallery {
+		height: 1448px;
+		padding-left: 2.6%;
+		padding-right: 2.6%;
+
+		&__first-pair {
+			#banner-one {
 				position: static;
 				width: 100%;
+				margin-bottom: 96px;
 			}
 
-			#slice9 {
-				margin-bottom: 50px;
+			#banner-two {
+				position: static;
+				width: 100%;
+				margin-top: 0;
 			}
 		}
 	}
